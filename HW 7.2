@@ -4,12 +4,13 @@
 (коровы). После отгадывания числа на экран необходимо вывести количество сделанных
 пользователем попыток. В программе необходимо использовать рекурсию.*/
 
+
 #include <stdio.h> 
 #include <stdlib.h>
 #include <time.h>
 
 int countingBulls(int userNumber, int compNumber);
-//int countingCows(int compNumber);
+int countingCows(int userNumber, int compNumber);
 
 int main()
 {
@@ -25,6 +26,8 @@ int main()
 	{
 		countingBulls(userNumber, compNumber);
 		printf("Correct numbers %i \n", countingBulls(userNumber, compNumber)/4);
+		printf("Correct position %i \n", countingCows(userNumber, compNumber));
+		
 		scanf("%i", &userNumber);
 	}
 	
@@ -54,4 +57,22 @@ int countingBulls(int userNumber, int compNumber)
 				divider = divider * 10;
 			}
 		return count ;
+}
+
+int countingCows(int userNumber, int compNumber)
+{
+   int count = 0;
+		int divider = 1;
+
+		while ((compNumber / divider) > 0)
+			{
+				int compSeparateNumber = (compNumber / divider) % 10;
+				int userSeparateNumber = (userNumber / divider) % 10;
+				divider = divider * 10;
+					if (compSeparateNumber == userSeparateNumber)
+					{
+					    count++;
+					}
+					return count ;
+			}
 }
