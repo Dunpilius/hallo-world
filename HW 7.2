@@ -56,10 +56,6 @@ int countingBulls(int userNumber, int compNumber)
 		return count ;
 }
 
-#include <stdio.h> 
-#include <stdlib.h>
-#include <time.h>
-
 int main()
 {
 	srand(time(0));
@@ -79,10 +75,7 @@ int main()
 	 numThree = (compNumber / 100) % 10;
 	 numFour = (compNumber / 1000) % 10;
 
-		
-		 
-	 
-	if ((((numOne - numTwo) == 0) || ((numOne - numThree) == 0) || ((numOne - numFour) == 0)
+	while ((((numOne - numTwo) == 0) || ((numOne - numThree) == 0) || ((numOne - numFour) == 0)
 		|| ((numTwo - numThree) == 0) || ((numTwo - numFour) == 0) || ((numThree - numFour) == 0)))
 
 	{
@@ -93,20 +86,6 @@ int main()
 		numTwo = (compNumber / 10) % 10;
 		numThree = (compNumber / 100) % 10;
 		numFour = (compNumber / 1000) % 10;
-		while ((((numOne - numTwo) != 0) && ((numOne - numThree) != 0) && ((numOne - numFour) != 0)
-			&& ((numTwo - numThree) != 0) && ((numTwo - numFour) != 0) && ((numThree - numFour) != 0)))
-			getchar();
-			
+
 	}
-			
-
-			
-		/* while (((numOne - numTwo) != 0) && ((numOne - numThree) != 0) && ((numOne - numFour) != 0)
-			&& ((numTwo - numThree) != 0) && ((numTwo - numFour) != 0) && ((numThree - numFour) != 0));
-		*/
-	
-	
-
-		
-	
 }
